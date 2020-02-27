@@ -23,7 +23,8 @@
     "update": "nx migrate latest",
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "start-prod:nextjs": "rm -rf .next && mv dist/apps/tuskdesk .next && node ./node_modules/.bin/next start"
   },
   "private": true,
   "dependencies": {
