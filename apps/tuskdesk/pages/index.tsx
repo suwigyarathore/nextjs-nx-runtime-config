@@ -1,4 +1,6 @@
 import React from 'react';
+import getConfig from 'next/config';
+const { publicRuntimeConfig } = getConfig();
 
 import './index.scss';
 
@@ -111,6 +113,12 @@ nx affected:e2e
       </main>
     </div>
   );
+};
+
+Index.getInitialProps = async ctx => {
+  console.log('I am here');
+  console.log(publicRuntimeConfig.staticFolder);
+  return {};
 };
 
 export default Index;
